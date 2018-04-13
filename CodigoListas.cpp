@@ -36,7 +36,7 @@ void Menu(){
 	printf("\n|                         |                            |");
 	printf("\n| 3. Buscar Elemento      | 4. Eliminar Elemento       |"); 
 	printf("\n|                         |                            |"); 
-	printf("\n| 5. Eliminar Lista       |                            |");
+	printf("\n| 5. Eliminar Lista       | 6 Salir                    |");
 	printf("\n|------------------------------------------------------|");
 	
 	printf("\nOPCION:");
@@ -79,7 +79,7 @@ void Menu(){
 	
 	case 5: 
 		    printf(" La Lista se ha eliminado \n");
-			while(lista!=NULL){
+			while(lista!=NULL){/* Mientras el dato no sea el final de la lista */
 				eliminarLista(lista,dato);
 			}
 			printf("\n");
@@ -87,12 +87,11 @@ void Menu(){
 			return Menu();
 	break;
 	
-	default: printf("\n\t\tHa ingresado un dato invalido\n");
+	default: printf("\n\t\tGracias por elegirnos!! \n");
 	printf("\n\t\t");
 	system("pause");
-	
 	break;
-	}
+	}while(opc!=6);
 }
 void insertarLista(Nodo *&lista,int n){
 	Nodo *nuevo_nodo=new Nodo();
